@@ -1,7 +1,9 @@
 import React from "react";
 import FhirClientProvider from "./FhirClientProvider";
-import Chart from "./Chart";
+import BloodPressureChart from "./BloodPressureChart";
 import Patient from "./Patient";
+import WeightChart from "./WeightChart";
+import Allergies from "./Allergies";
 
 /**
  * Wraps everything into `FhirClientProvider` so that any component
@@ -12,7 +14,11 @@ const Page = () => {
     <FhirClientProvider>
       <Patient />
       <hr />
-      <Chart />
+      <BloodPressureChart />
+      <br />
+      <WeightChart />
+      <br />
+      <Allergies />
       <br />
     </FhirClientProvider>
   );

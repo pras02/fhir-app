@@ -3,8 +3,6 @@ import { oauth2 as SMART } from "fhirclient";
 import { FhirClientContext } from "../FhirClientContext";
 
 const FhirClientProvider = props => {
-  const context = useContext(FhirClientContext);
-
   const [client, setClient] = useState();
   const [error, setError] = useState();
 

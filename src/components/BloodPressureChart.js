@@ -25,6 +25,7 @@ const Chart = () => {
           systolic: [],
           diastolic: []
         };
+        console.log(bp);
         bp.forEach(o => {
           o.component.forEach(c => {
             const code = client.getPath(c, "code.coding.0.code");

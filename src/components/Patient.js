@@ -4,7 +4,7 @@ import { FhirClientContext } from "../FhirClientContext";
 const PatientName = ({ name = [] }) => {
   let entry = name.find(nameRecord => nameRecord.use === "official") || name[0];
   if (!entry) {
-    return <h1>No Name</h1>;
+    return <h2>No Name</h2>;
   }
   return <h1>{entry.given.join(" ") + " " + entry.family}</h1>;
 };
@@ -14,7 +14,7 @@ const PatientBanner = patient => {
     <div>
       <PatientName name={patient.name} />
       <span>
-        Gender: <b>{patient.gender}</b>,{" "}
+        Gender: <b>{patient.gender.toUpperCase()}</b>,{" "}
       </span>
       <span>
         DOB: <b>{patient.birthDate}</b>
@@ -58,7 +58,7 @@ const Patient = () => {
     return error.message;
   }
   return (
-    <div>
+    <div className="patBanner">
       <PatientBanner {...patient} />
       <br />
       Patient ID: {patient.id}

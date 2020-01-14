@@ -6,7 +6,10 @@ const Launcher = () => {
     SMART.authorize({
       clientId: "my-client-id",
       scope: "launch launch/patient patient/read offline_access",
-      redirectUri: "./app"
+      redirectUri: "./app",
+
+      iss: "https://launch.smarthealthit.org/v/r3/sim/eyJoIjoiMSJ9/fhir"
+
       // iss:
       //   "https://launch.smarthealthit.org/v/r3/sim/" +
       //   "eyJoIjoiMSIsImIiOiJmMDQ2MjkzNi1lYjRiLTRkYT" +
