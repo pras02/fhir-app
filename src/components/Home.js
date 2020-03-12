@@ -4,6 +4,7 @@ import BloodPressureChart from "./BloodPressureChart";
 import Patient from "./Patient";
 import WeightChart from "./WeightChart";
 import Allergies from "./Allergies";
+import '../App.css'
 
 /**
  * Wraps everything into `FhirClientProvider` so that any component
@@ -17,8 +18,6 @@ const Page = () => {
       <BloodPressureChart />
       <br />
       <WeightChart />
-      <br />
-      <Allergies />
       <br />
     </FhirClientProvider>
   );

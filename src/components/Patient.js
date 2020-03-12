@@ -1,12 +1,12 @@
-import React, { useContext, useEffect, useState } from "react";
-import { FhirClientContext } from "../FhirClientContext";
+import React, { useContext, useEffect, useState } from 'react';
+import { FhirClientContext } from '../FhirClientContext';
 
 const PatientName = ({ name = [] }) => {
-  let entry = name.find(nameRecord => nameRecord.use === "official") || name[0];
+  let entry = name.find(nameRecord => nameRecord.use === 'official') || name[0];
   if (!entry) {
     return <h2>No Name</h2>;
   }
-  return <h1>{entry.given.join(" ") + " " + entry.family}</h1>;
+  return <h1>{entry.given.join(' ') + ' ' + entry.family}</h1>;
 };
 
 const PatientBanner = patient => {
@@ -14,7 +14,7 @@ const PatientBanner = patient => {
     <div>
       <PatientName name={patient.name} />
       <span>
-        Gender: <b>{patient.gender.toUpperCase()}</b>,{" "}
+        Gender: <b>{patient.gender.toUpperCase()}</b>,{' '}
       </span>
       <span>
         DOB: <b>{patient.birthDate}</b>

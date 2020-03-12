@@ -31,7 +31,5 @@ const Allergies = () => {
   //     const  })
 
   // console.log(allergies);
-
-  return <div>Allergies</div>;
 };
 export default Allergies;
